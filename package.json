@@ -1,0 +1,22 @@
+{
+  "name": "trendsetter",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Cross-browser social content collector with SQLite storage and pluggable RAG research APIs.",
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build -w @trendsetter/shared && npm run build -w @trendsetter/server && npm run build -w @trendsetter/extension",
+    "build:extension": "npm run build -w @trendsetter/extension",
+    "build:server": "npm run build -w @trendsetter/server",
+    "check": "npm run build -w @trendsetter/shared && npm run check -w @trendsetter/server && npm run check -w @trendsetter/extension",
+    "dev:server": "npm run dev -w @trendsetter/server",
+    "start:server": "npm run start -w @trendsetter/server"
+  },
+  "engines": {
+    "node": ">=20.11"
+  }
+}

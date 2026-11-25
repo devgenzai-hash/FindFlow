@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "Trendsetter Collector",
+  "version": "0.1.0",
+  "description": "Collect public social content metrics into a local Trendsetter research database.",
+  "permissions": ["activeTab", "storage", "tabs", "downloads"],
+  "host_permissions": [
+    "http://localhost:3318/*",
+    "http://127.0.0.1:3318/*",
+    "https://www.instagram.com/*",
+    "https://instagram.com/*",
+    "https://x.com/*",
+    "https://twitter.com/*",
+    "https://www.youtube.com/*",
+    "https://youtube.com/*",
+    "https://m.youtube.com/*"
+  ],
+  "action": {
+    "default_title": "Trendsetter Collector",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.instagram.com/*",
+        "https://instagram.com/*",
+        "https://x.com/*",
+        "https://twitter.com/*",
+        "https://www.youtube.com/*",
+        "https://youtube.com/*",
+        "https://m.youtube.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "trendsetter-collector@example.local",
+      "strict_min_version": "109.0"
+    }
+  }
+}

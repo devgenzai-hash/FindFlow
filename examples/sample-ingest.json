@@ -1,0 +1,46 @@
+{
+  "platform": "youtube",
+  "accountHandle": "@mkbhd",
+  "accountUrl": "https://www.youtube.com/@mkbhd/videos",
+  "collector": {
+    "name": "trendsetter-extension",
+    "version": "0.1.0",
+    "collectedFromUrl": "https://www.youtube.com/@mkbhd/videos",
+    "maxScrolls": 3,
+    "userAgent": "sample"
+  },
+  "items": [
+    {
+      "platform": "youtube",
+      "accountHandle": "@mkbhd",
+      "accountUrl": "https://www.youtube.com/@mkbhd/videos",
+      "sourceUrl": "https://www.youtube.com/watch?v=example-phone-review",
+      "externalId": "example-phone-review",
+      "itemType": "video",
+      "title": "Future Phone Review: What Actually Matters",
+      "text": "A review focused on battery, camera processing, thermals, and daily-use tradeoffs.",
+      "metrics": {
+        "views": 1850000,
+        "likes": 98000,
+        "comments": 6100
+      },
+      "collectedAt": "2026-06-01T00:00:00.000Z"
+    },
+    {
+      "platform": "youtube",
+      "accountHandle": "@mkbhd",
+      "accountUrl": "https://www.youtube.com/@mkbhd/videos",
+      "sourceUrl": "https://www.youtube.com/watch?v=example-camera-test",
+      "externalId": "example-camera-test",
+      "itemType": "video",
+      "title": "Blind Smartphone Camera Test Results",
+      "text": "Audience-voted camera comparison across daylight, portrait, zoom, and low-light scenes.",
+      "metrics": {
+        "views": 4200000,
+        "likes": 210000,
+        "comments": 17000
+      },
+      "collectedAt": "2026-06-01T00:00:00.000Z"
+    }
+  ]
+}

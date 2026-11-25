@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Trendsetter Collector</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>Trendsetter</h1>
+        <p id="platformLabel">Ready</p>
+      </div>
+      <span id="statusDot" aria-hidden="true"></span>
+    </header>
+
+    <main>
+      <label>
+        <span>Server</span>
+        <input id="serverUrl" type="url" spellcheck="false" />
+      </label>
+
+      <label>
+        <span>Scroll passes</span>
+        <input id="maxScrolls" type="number" min="1" max="500" step="1" />
+      </label>
+
+      <div class="actions">
+        <button id="collectButton" type="button">Collect</button>
+        <button id="downloadButton" type="button" disabled>Download JSON</button>
+      </div>
+
+      <section class="summary" aria-live="polite">
+        <strong id="itemCount">0</strong>
+        <span id="statusText">Open a supported profile or channel page.</span>
+      </section>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Views</th>
+            <th>Likes</th>
+            <th>Comments</th>
+          </tr>
+        </thead>
+        <tbody id="previewRows"></tbody>
+      </table>
+    </main>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>
